@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Product Showcase</title>
+
+    <style>
+        /* ----------- GENERAL STYLING ----------- */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f0f4f8;
+            color: #1a2a3e;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background: #16213e;
+            color: white;
+            border-radius: 25px;
+        }
+
+        h2 {
+            color: #0f3460;
+            margin-top: 30px;
+        }
+
+        /* ----------- 1. ROUNDED CORNERS ----------- */
+        .product-box {
+            width: 500px;
+            padding: 20px;
+            margin: 15px auto;
+            background-color: #dbe9ff;
+            border: 2px solid #0f3460;
+            border-radius: 15px 50px 30px 5px;
+            font-size: 18px;
+        }
+
+        /* ----------- 2. BORDER IMAGE ----------- */
+        .quote-box {
+            width: 500px;
+            padding: 20px;
+            margin: 20px auto;
+            border: 15px solid transparent;
+            border-image: linear-gradient(
+                45deg,
+                #0f3460,
+                #e94560,
+                #0f3460
+            ) 30 round;
+            background-color: #ffffff;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* ----------- 3. MULTIPLE BACKGROUNDS ----------- */
+        .multi-bg {
+            width: 500px;
+            height: 160px;
+            margin: 20px auto;
+            border-radius: 10px;
+
+            background-image:
+                linear-gradient(
+                    rgba(15, 52, 96, 0.75),
+                    rgba(22, 33, 62, 0.85)
+                ),
+                url("tech.jpg");
+
+            background-position: center, center;
+            background-repeat: no-repeat, no-repeat;
+            background-size: cover, cover;
+
+            color: white;
+            text-align: center;
+            line-height: 160px;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        /* ----------- 4. BACKGROUND SIZE ----------- */
+        .bg-size {
+            width: 500px;
+            height: 180px;
+            margin: 20px auto;
+            border: 2px solid #0f3460;
+            border-radius: 10px;
+
+            background-image: url("product.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* ----------- 5. PSEUDO-CLASSES ON FORM INPUTS ----------- */
+        form {
+            width: 500px;
+            padding: 20px;
+            margin: 20px auto;
+            background: #ffffff;
+            border: 2px solid #0f3460;
+            border-radius: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        textarea {
+            width: 95%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 2px solid #999;
+            border-radius: 5px;
+        }
+
+        input:focus,
+        textarea:focus {
+            border-color: #0f3460;
+            background: #eef4ff;
+            outline: none;
+        }
+
+        input:required {
+            border-left: 5px solid #e94560;
+        }
+
+        input:valid {
+            border-color: #2e8b57;
+        }
+
+        input:invalid:not(:placeholder-shown) {
+            border-color: #e94560;
+        }
+
+        /* ----------- 6. ADJACENT SIBLING COMBINATOR (+) ----------- */
+        .item {
+            margin: 10px auto;
+            width: 500px;
+        }
+
+        .productName {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #0f3460;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .productImg {
+            display: block;
+            width: 250px;
+            border-radius: 10px;
+            margin-top: 10px;
+            opacity: 0.2;
+            transition: opacity 0.5s ease;
+        }
+
+        .productName:hover + .productImg {
+            opacity: 1;
+        }
+
+        /* ----------- 7. NTH-CHILD ----------- */
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+
+        th,
+        td {
+            padding: 12px;
+            border: 1px solid #0f3460;
+            text-align: left;
+        }
+
+        th {
+            background: #16213e;
+            color: white;
+        }
+
+        tr:nth-child(odd) {
+            background: #dbe9ff;
+        }
+
+        tr:nth-child(even) {
+            background: #ffffff;
+        }
+
+        tr:hover {
+            background: #e94560;
+            color: white;
+        }
+
+        /* ----------- HTML5 FOOTER ----------- */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background: #16213e;
+            color: white;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tech Product Showcase</h1>
+    </header>
+
+    <main>
+
+        <!-- 1. Rounded Corners -->
+        <section>
+            <h2>1. Rounded Corners</h2>
+
+            <div class="product-box">
+                Welcome to the Tech Product Showcase.
+                Explore the latest smartphones, laptops,
+                smartwatches, and other innovative technology products.
+            </div>
+        </section>
+
+        <!-- 2. Border Image -->
+        <section>
+            <h2>2. Border Image</h2>
+
+            <div class="quote-box">
+                "Technology is best when it brings people together."
+                <br>
+                — Matt Mullenweg
+            </div>
+        </section>
+
+        <!-- 3. Multiple Backgrounds -->
+        <section>
+            <h2>3. Multiple Backgrounds</h2>
+
+            <div class="multi-bg">
+                Latest Tech Products
+            </div>
+        </section>
+
+        <!-- 4. Background Size -->
+        <section>
+            <h2>4. Background Size</h2>
+
+            <div class="bg-size"></div>
+        </section>
+
+        <!-- 5. Pseudo-classes -->
+        <section>
+            <h2>5. Pseudo-classes on Product Enquiry Form</h2>
+
+            <form>
+                <label for="name">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
+                <label for="product">Product Name</label>
+                <input
+                    type="text"
+                    id="product"
+                    placeholder="Enter product name"
+                    required
+                >
+
+                <label for="msg">Message</label>
+                <textarea
+                    id="msg"
+                    rows="3"
+                    placeholder="Enter your enquiry"
+                ></textarea>
+            </form>
+        </section>
+
+        <!-- 6. Adjacent Sibling -->
+        <section>
+            <h2>6. Adjacent Sibling Combinator (+)</h2>
+
+            <div class="item">
+                <span class="productName">
+                    Hover to View: Smartwatch
+                </span>
+
+                <img
+                    class="productImg"
+                    src="smartwatch.jpg"
+                    alt="Smartwatch"
+                >
+            </div>
+        </section>
+
+        <!-- 7. Nth Child -->
+        <section>
+            <h2>7. nth-child(odd) / nth-child(even)</h2>
+
+            <table>
+                <tr>
+                    <th>Product</th>
+                    <th>Category</th>
+                </tr>
+
+                <tr>
+                    <td>iPhone 17</td>
+                    <td>Smartphone</td>
+                </tr>
+
+                <tr>
+                    <td>MacBook Air</td>
+                    <td>Laptop</td>
+                </tr>
+
+                <tr>
+                    <td>Galaxy Watch</td>
+                    <td>Smartwatch</td>
+                </tr>
+
+                <tr>
+                    <td>AirPods</td>
+                    <td>Audio</td>
+                </tr>
+
+                <tr>
+                    <td>iPad</td>
+                    <td>Tablet</td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        Done By: EDWIN A | Tech Product Showcase
+    </footer>
+
+</body>
+</html>
